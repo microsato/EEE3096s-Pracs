@@ -21,7 +21,6 @@ void initGPIO(void){
         wiringPiSetup(); //This is the default mode. If you want to change pinouts, be aware
 
         RTC = wiringPiI2CSetup(RTCAddr); //Set up the RTC
-
         //Set up the LEDS
         for(int i; i < sizeof(LEDS)/sizeof(LEDS[0]); i++){
             pinMode(LEDS[i], OUTPUT);
